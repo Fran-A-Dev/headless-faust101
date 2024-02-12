@@ -3,7 +3,7 @@ import tag from "./tag";
 import frontPage from "./front-page";
 import page from "./page";
 import single from "./single";
-import test from "./test";
+import samplePage from "./sample-page";
 
 export default {
   category,
@@ -11,5 +11,5 @@ export default {
   "front-page": frontPage,
   page,
   single,
-  test,
+  samplePage,
 };

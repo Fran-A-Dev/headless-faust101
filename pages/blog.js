@@ -7,7 +7,7 @@ const GET_POSTS = gql`
         title
         excerpt
         databaseId
-        slug
+        uri
       }
     }
   }
@@ -18,10 +18,12 @@ export default function Blog() {
   if (error) return `Error! ${error.message}`;
   return (
     <ul>
-      {data.posts.nodes.map(([post]) => (
+      {data.posts.nodes.map((post) => (
         <li key={post.databaseId}>
-          <Link href={`/posts/${post.slug}`}>
+          <Link href={`${post.uri}`}>
             <h1>{post.title}</h1>
+          </Link>
+          <Link href={`${post.uri}`}>
             <h1>{post.excerpt}</h1>
           </Link>
         </li>
