@@ -23,6 +23,7 @@ export default function Blog() {
   return (
     <div>
       <h1>{data.post.title}</h1>
+      <p dangerouslySetInnerHTML={{ __html: data.post.content }} />
     </div>
   );
 }

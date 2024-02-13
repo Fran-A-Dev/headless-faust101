@@ -21,11 +21,11 @@ export default function Blog() {
       {data.posts.nodes.map((post) => (
         <li key={post.databaseId}>
           <Link href={`${post.uri}`}>
-            <h1>{post.title}</h1>
+            <h2>{post.title}</h2>
           </Link>
-          <Link href={`${post.uri}`}>
-            <h1>{post.excerpt}</h1>
-          </Link>
+          <div>
+            <p dangerouslySetInnerHTML={{ __html: post.excerpt }} />
+          </div>
         </li>
       ))}
     </ul>
