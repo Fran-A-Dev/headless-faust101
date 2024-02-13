@@ -11,5 +11,5 @@ export default {
   "front-page": frontPage,
   page,
   single,
-  samplePage,
+  "sample-page": samplePage,
 };
